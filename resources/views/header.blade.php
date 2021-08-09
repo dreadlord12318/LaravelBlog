@@ -19,20 +19,20 @@
                 <div class = "flex">
                     <a class = "flex items-center py-2 px-3 text-green-900" href = "#">
                     <img class = "h-10 w-10 mr-1" src = "/images/LAMB-ID-Icon-Green.png">
-                    <span>LAMBENT</span>
+                    <span class = "font-bold text-green-600">LAMBENT</span>
                     </a>
                 </div>
 
                 <!-- Primary Nav -->
                 <div class = "flex items-center space-x-3">
-                    <a href="" class = "py-2 px-3 text-indigo-900">Features</a>
-                    <a href="" class = "py-2 px-3 text-indigo-900">Blogs</a>
+                    <a href="" class = "py-2 px-3 text-indigo-900 hover:text-blue-900">Features</a>
+                    <a href="" class = "py-2 px-3 text-indigo-900 hover:text-blue-900">Blogs</a>
                 </div>
             </div>
                 <!-- Secondary Nav -->
                 <div class = "flex items-center space-x-3 mr-4">
-                    <a href="" class = "py-2 px-3 text-indigo-900">LogIn</a>
-                    <a href="" class = "py-2 px-3 text-indigo-900 bg-blue-500 rounded">SignUp</a>
+                    <a href="#" class = "py-2 px-3 text-indigo-900">LogIn</a>
+                    <a href="#" class = "py-2 px-3 text-blue-900 bg-blue-500 hover:bg-blue-900 hover:text-blue-50 rounded">SignUp</a>
                 </div>
         </div>
     </div>
