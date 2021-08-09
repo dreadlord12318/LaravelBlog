@@ -12,21 +12,28 @@
 
 <nav>
      <!-- navbar in here -->
-    <div class = "max-w-10xl mx-auto border border-red-400">
+    <div class = "max-w-8xl mx-auto">
         <div class = "flex justify-between">
-            <div class = "flex">
+            <div class = "flex ml-4 space-x-4">
                 <!-- Logo -->
-                <div>
-                    <a href = "#">
-                    <img class = "h-6 w-6" src = "/images/LAMB-ID-Icon-Green.png">
+                <div class = "flex">
+                    <a class = "flex items-center py-2 px-3 text-green-900" href = "#">
+                    <img class = "h-10 w-10 mr-1" src = "/images/LAMB-ID-Icon-Green.png">
+                    <span>LAMBENT</span>
                     </a>
                 </div>
 
                 <!-- Primary Nav -->
-                <div>Primary</div>
+                <div class = "flex items-center space-x-3">
+                    <a href="" class = "py-2 px-3 text-indigo-900">Features</a>
+                    <a href="" class = "py-2 px-3 text-indigo-900">Blogs</a>
+                </div>
             </div>
                 <!-- Secondary Nav -->
-                <div>Secondary</div>
+                <div class = "flex items-center space-x-3 mr-4">
+                    <a href="" class = "py-2 px-3 text-indigo-900">LogIn</a>
+                    <a href="" class = "py-2 px-3 text-indigo-900 bg-blue-500 rounded">SignUp</a>
+                </div>
         </div>
     </div>
 
