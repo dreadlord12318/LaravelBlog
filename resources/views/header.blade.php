@@ -12,7 +12,7 @@
 
 <nav>
      <!-- navbar in here -->
-    <div class = "max-w-8xl mx-auto">
+    <div class = "max-w-8xl mx-auto bg-teal-500">
         <div class = "flex justify-between">
             <div class = "flex ml-4 space-x-4">
                 <!-- Logo -->
