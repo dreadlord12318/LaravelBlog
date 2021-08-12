@@ -6,33 +6,33 @@
 
         <title>Laravel</title>
 
-  <link rel = "stylesheet" href="{{ asset('css/app.css')}}">
+        <link href="/css/app.css" rel="stylesheet">
     </head>
     <body>
 
 <nav>
      <!-- navbar in here -->
-    <div class = "max-w-8xl mx-auto bg-teal-500">
-        <div class = "flex justify-between">
+    <div class = "max-w-8xl mx-auto h-14 bg-green-800">
+        <div class = "flex items-center h-14 justify-between">
             <div class = "flex ml-4 space-x-4">
                 <!-- Logo -->
-                <div class = "flex">
+                <div class = "flex pl-6 space-x-8">
                     <a class = "flex items-center py-2 px-3 text-green-900" href = "#">
-                    <img class = "h-10 w-10 mr-1" src = "/images/LAMB-ID-Icon-Green.png">
-                    <span class = "font-bold text-green-600">LAMBENT</span>
+                    <img class = "h-5 w-8 mr-1" src = "/images/Vector.png">
+                    <span class = "font-bold text-white">TAILWIND</span>
                     </a>
                 </div>
 
                 <!-- Primary Nav -->
-                <div class = "flex items-center space-x-3">
-                    <a href="" class = "py-2 px-3 text-indigo-900 hover:text-blue-900">Features</a>
-                    <a href="" class = "py-2 px-3 text-indigo-900 hover:text-blue-900">Blogs</a>
+                <div class = "flex items-center w-44 space-x-6">
+                    <a href="" class = " text-white hover:text-blue-900">Features</a>
+                    <a href="" class = " text-white hover:text-blue-900">Docs</a>
+                    <a href="" class = " text-white hover:text-blue-900">Blogs</a>
                 </div>
             </div>
                 <!-- Secondary Nav -->
-                <div class = "flex items-center space-x-3 mr-4">
-                    <a href="#" class = "py-2 px-3 text-indigo-900">LogIn</a>
-                    <a href="#" class = "py-2 px-3 text-blue-900 bg-blue-500 hover:bg-blue-900 hover:text-blue-50 rounded">SignUp</a>
+                <div class = "flex items-center mr-7">
+                    <a href="#" class = "py-2 px-4 items-center text-white border-white border-2  rounded">Download</a>
                 </div>
         </div>
     </div>
