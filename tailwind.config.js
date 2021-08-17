@@ -2,39 +2,18 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: [
-    './storage/framework/views/*.php',
-    './resources/**/*.blade.php',
-    './resources/**/*.js',
-    './resources/**/*.vue'
-
+    './resources/views/**/*.blade.php',
+    './resources/css/**/*.css',
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      // Build your palette here
-      transparent: 'transparent',
-      current: 'currentColor',
-      gray: colors.trueGray,
-      red: colors.red,
-      blue: colors.sky,
-      yellow: colors.amber,
-      teal: colors.teal,
-    },
     extend: {
-      
-    },
-    
-    
+      colors: {
+        fuchsia: colors.fuchsia,
+      },
+    }
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-}
-
-
-module.exports = {
-  theme: {
-    
-  }
+  variants: {},
+  plugins: [
+    require('@tailwindcss/ui'),
+  ]
 }
