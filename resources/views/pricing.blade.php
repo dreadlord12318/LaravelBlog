@@ -3,5 +3,5 @@
 
 @section('content')
 <!-- This example requires Tailwind CSS v2.0+ -->
-<test></test>
+<example></example>
 @endsection
