@@ -60,7 +60,9 @@
                       <p class="text-indigo-200 text-sm">{{ price.paid }}</p>
                     </div>
                   </div>
-                  <a href="#" class="bg-white text-indigo-600 hover:bg-indigo-50 mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full">Buy Starter</a>
+                  <button type="button"
+      @click="openModal"
+ class="bg-white text-indigo-600 hover:bg-indigo-50 mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full">Buy Starter</button>
               </div>
               </div>
               <h4 class="sr-only">Features</h4>
@@ -103,7 +105,9 @@
                       <p class="text-gray-500 text-sm">{{ price.paid }}</p>
                     </div>
                   </div>
-                  <a href="#" class="bg-indigo-600 text-white hover:bg-indigo-700 mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full">Buy Scale</a>
+                 <button type="button"
+      @click="openModal"
+ class="bg-indigo-600 text-white hover:bg-indigo-700 mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full">Buy Scale</button>
                 </div>
               </div>
               <h4 class="sr-only">Features</h4>
@@ -170,7 +174,9 @@
                       <p class="text-indigo-200 text-sm">{{ price.paid }}</p>
                     </div>
                   </div>
-                  <a href="#" class="bg-white text-indigo-600 hover:bg-indigo-50 mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full">Buy Growth</a>
+               <button type="button"
+      @click="openModal"
+ class="bg-white text-indigo-600 hover:bg-indigo-50 mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full">Buy Growth</button>
                 </div>
               </div>
               <h4 class="sr-only">Features</h4>
@@ -222,15 +228,79 @@
     </TabGroup>
  
    </div>
-  
-  
+  <!-- Modal -->
+   <TransitionRoot appear :show="isOpen" as="template">
+    <Dialog as="div" @close="closeModal">
+      <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class=" px-4 text-center">
+          <TransitionChild
+            as="template"
+            enter="duration-300 ease-out"
+            enter-from="opacity-0"
+            enter-to="opacity-100"
+            leave="duration-200 ease-in"
+            leave-from="opacity-100"
+            leave-to="opacity-0"
+          >
+       
+            <DialogOverlay class="fixed inset-0" />
+          </TransitionChild>
+
+          <span class="inline-block h-full align-middle" aria-hidden="true">
+            &#8203;
+          </span>
+
+          <TransitionChild
+            as="template"
+            enter="duration-300 ease-out"
+            enter-from="opacity-0 scale-95"
+            enter-to="opacity-100 scale-100"
+            leave="duration-200 ease-in"
+            leave-from="opacity-100 scale-100"
+            leave-to="opacity-0 scale-95"
+          >
+            <div
+              class="inline-block h-64 p-8 align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:max-h-2xl sm:w-full"
+            >
+              <DialogTitle
+                as="h3"
+                class="text-lg font-medium leading-6 pt-6 text-gray-900"
+              >
+                Payment successful
+              </DialogTitle>
+              <div class="mt-2">
+                <p class="text-sm text-gray-500">
+                  Your payment has been successfully submitted. We’ve sent your
+                  an email with all of the details of your order.
+                </p>
+              </div>
+
+              <div class="mt-4 pt-8">
+                <button
+                  type="button"
+                  class="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                  @click="closeModal"
+                >
+                  Got it, thanks!
+                </button>
+              </div>
+            </div>
+          </TransitionChild>
+        </div>
+      </div>
+    </Dialog>
+  </TransitionRoot>
       
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
-import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+import { TabGroup, TabList, Tab, TabPanels, TabPanel, TransitionRoot,
+  TransitionChild,
+  Dialog,
+  DialogOverlay,
+  DialogTitle, } from '@headlessui/vue'
 
 export default {
   components: {
@@ -239,6 +309,11 @@ export default {
     Tab,
     TabPanels,
     TabPanel,
+    TransitionRoot,
+    TransitionChild,
+    Dialog,
+    DialogOverlay,
+    DialogTitle,
   },
   setup() {
     let categories = ref({
@@ -267,7 +342,18 @@ export default {
       
     })
 
-    return { categories }
-  },
+      const isOpen = ref(false)
+    return { categories,
+     isOpen,
+      closeModal() {
+        isOpen.value = false
+      },
+      openModal() {
+        isOpen.value = true
+      },
+    }
+    },
+
+  
 }
 </script>

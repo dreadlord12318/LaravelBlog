@@ -4,7 +4,14 @@ module.exports = {
     './resources/css/**/*.css',
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        grape: {
+          400: '#C084FC',
+          600: '#C084FC',
+        },
+      }
+    }
   },
   variants: {},
   plugins: [

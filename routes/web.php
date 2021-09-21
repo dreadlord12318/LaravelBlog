@@ -21,6 +21,13 @@ Route::get('/pricing', function () {
     return view('pricing');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/features', function () {
+    return view('features');
+});
 
 Auth::routes();
 
