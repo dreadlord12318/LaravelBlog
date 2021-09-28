@@ -6,6 +6,7 @@ import example from './components/ExampleComponent.vue'
 import test from './components/test.vue'
 import contact from './components/contact.vue'
 import features from './components/features.vue'
+import about from './components/about.vue'
 
 createApp({
     components:{
@@ -13,6 +14,7 @@ createApp({
         test,
         contact,
         features,
+        about,
     }
 
 }).mount('#app')
